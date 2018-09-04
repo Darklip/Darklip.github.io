@@ -1,0 +1,140 @@
+@text-font: 'Proxima Nova';
+@margin-horisontal: 0 50px;
+@color-green: #006E00;
+@color-green_70per: rgba(0,110,0,0.6);
+@color-black_50per: rgba(0,0,0,0.5);
+
+* { margin:0; padding:0; }
+
+body {
+    font-family: @text-font;
+    height: 100%;
+    background-image: url('../../resources/image/irongrip.png');
+    color: white;
+}
+
+a {
+    color: @color-green+#003300;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+a:hover {
+    color: @color-green+#005500;
+    transition-duration: 0.2s;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: @color-green_70per;
+    box-shadow: inset 0px -17px 10px -10px @color-green_70per;
+    width: 100%;
+}
+
+.header-navigation {
+    margin: @margin-horisontal;
+    padding: 10px 0;
+}
+
+.header-navigation_element {
+    color: white;
+    padding: 10px 8px;
+    font-size: 10pt;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,0);
+    transition-duration: 0.3s;
+}
+.header-navigation_element:hover {
+    background-color: @color-green_70per;
+    color: @color-green+#005500;
+    box-shadow: inset 0px -12px 10px -8px @color-green+#004400;
+    border: 1px solid @color-green+#003300;
+    transition-duration: 0.3s;
+}
+.header-navigation_element:focus {
+    color: @color-green -#005500;
+    box-shadow: inset 0px -13px 10px -8px @color-green -#004400;
+    border-left: 1px solid @color-green -#003300;
+    border-right: 1px solid @color-green -#003300;
+    transition-duration: 0.1s;
+}
+
+.content {
+    padding: 20px 0;
+    border-bottom: 1px solid @color-black_50per;
+}
+
+.content-about {
+    margin: @margin-horisontal;
+    position: relative;
+    h2 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+.content-about_left, .content-about_right{
+    position: absolute;
+    top: 60px;
+}
+.content-about-left {
+    left: 0;
+    width: 25%;
+    height: 100%;
+}
+.content-about-right {
+    right: 0;
+    width: 75%;
+    height: 100%;
+}
+.content-skills {
+    margin: @margin-horisontal;
+    margin-top: 10px;
+    position: relative;
+    border-top: 1px solid @color-green;
+}
+.content-skills_set {
+    margin: 20px 0;
+}
+.skill {
+    display: inline-block;
+    margin: 8px;
+    a {
+        color: white;
+        border-radius: 5px;
+        padding: 2px 5px;
+        background-color: @color-green_70per;
+        border: 2px solid @color-green_70per+#002200;
+        transition-duration: 0.3s;
+    }
+    a:hover {
+        background-color: @color-green;
+        border: 2px solid @color-green+#004400;
+        transition-duration: 0.3s;
+    }
+}
+.content-career {
+    margin: @margin-horisontal;
+    border-top: 1px solid @color-green;
+}
+
+footer {
+    padding: 25px 0;
+    font-size: 10pt;
+    background-image: url(../../resources/image/bg-dark-4765.gif);
+    box-shadow: inset 0px 18px 10px -10px @color-black_50per;
+    text-align: center;
+}
+.footer-text, .footer-links {
+    margin: @margin-horisontal;
+}
+.footer-links {
+    padding: 10px;
+    a {
+        margin: 6px;
+    }
+}
